@@ -11,9 +11,9 @@ window.onload = function() {
   });
   */
   var locations = [
-    { x: 35.681735, y: 139.762651 },
-    { x: 35.681622, y: 139.766073 },
-    { x: 35.682622, y: 139.766373 },
+    { y: 35.681735, x: 139.762651 },
+    { y: 35.681622, x: 139.766073 },
+    { y: 35.682622, x: 139.766373 },
   ];
   showMap(locations);
 };
@@ -31,7 +31,7 @@ function showMap(locations) {
   });
 
   locations.forEach(function(location) {
-    var pos = new google.maps.LatLng(location.x, location.y);
+    var pos = new google.maps.LatLng(location.y, location.x);
     var title = 'チャットのタイトル';
     var marker = new google.maps.Marker({
       position: pos,
