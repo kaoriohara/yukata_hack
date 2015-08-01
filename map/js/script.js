@@ -1,10 +1,6 @@
 /*global $, google */
 window.onload = function() {
   var defaultPos = new google.maps.LatLng(35.681735, 139.762651);
-  var icon = new google.maps.MarkerImage('img/ico.png',
-    new google.maps.Size(55, 72), // サイズ
-    new google.maps.Point(0, 0)   // 位置
-  );
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
     zoom: 12,
     center: defaultPos,
@@ -17,7 +13,6 @@ window.onload = function() {
     var marker = new google.maps.Marker({
       position: pos,
       map: map,
-      icon: icon,
       title: title,
     });
     new google.maps.InfoWindow({
