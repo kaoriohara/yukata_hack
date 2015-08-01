@@ -43,8 +43,30 @@ window.onload = function() {
       putMarker(location.x, location.y);
     });
   });
+
+  // イベントチャット追加
+  google.maps.event.addListener(map, 'click', function(e) {
+    var ok = confirm('ここにイベントを作りますか？');
+    if (ok) {
+      createEvent(e.latLng.G, e.latLng.K);
+    }
+  });
 };
 
 function openChat(x, y) {
   alert('open chat: ' + x + ', ' + y);
+}
+function createEvent(x, y) {
+  $.ajax('/save_event', {
+    method: 'POST',
+    data: {
+      'position_x': x,
+      'position_y': y,
+    },
+  }).done(function() {
+    alert('イベントを作りました');
+    openChat(x, y);
+  }).fail(function() {
+    alert('イベントを作れませんでした');
+  });
 }
