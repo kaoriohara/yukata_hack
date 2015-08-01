@@ -1,11 +1,24 @@
-/*global google */
-var locations = [
-  { x: 35.681735, y: 139.762651 },
-  { x: 35.681622, y: 139.766073 },
-  { x: 35.682622, y: 139.766373 },
-];
-
+/*global $, google */
 window.onload = function() {
+  /*
+  $.ajax('/event/', {
+    method: 'GET',
+    dataType: 'json'
+  }).done(function(locations) {
+    showMap(locations);
+  }).fail(function() {
+    alert('データの取得に失敗しました');
+  });
+  */
+  var locations = [
+    { x: 35.681735, y: 139.762651 },
+    { x: 35.681622, y: 139.766073 },
+    { x: 35.682622, y: 139.766373 },
+  ];
+  showMap(locations);
+};
+
+function showMap(locations) {
   var defaultPos = new google.maps.LatLng(35.681735, 139.762651);
   var icon = new google.maps.MarkerImage('img/ico.png',
     new google.maps.Size(55, 72), // サイズ
@@ -34,7 +47,7 @@ window.onload = function() {
       openChat(e.latLng.G, e.latLng.K);
     });
   });
-};
+}
 
 function openChat(x, y) {
   alert('open chat: ' + x + ', ' + y);
