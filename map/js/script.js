@@ -6,7 +6,7 @@ window.onload = function() {
     new google.maps.Point(0, 0)   // 位置
   );
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
-    zoom: 15,
+    zoom: 12,
     center: defaultPos,
     mapTypeControlOptions: { mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP] }/*表示タイプの指定*/
   });
@@ -40,9 +40,10 @@ window.onload = function() {
     alert('データの取得に失敗しました');
     // TODO: 仮のデータなので消す
     [
-      { y: 35.681735, x: 139.762651 },
-      { y: 35.681622, x: 139.766073 },
       { y: 35.682622, x: 139.766373 },
+      { y: 35.705524, x: 139.7941462 },
+      { y: 35.6295764, x: 139.794686 },
+      { y: 35.6990369, x: 139.7437276 },
     ].forEach(function(location) {
       putMarker(location.x, location.y);
     });
