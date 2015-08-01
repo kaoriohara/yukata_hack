@@ -596,3 +596,62 @@ p.free_eyecatch{
 	
 }
 
+
+/*chat画面*/
+.chat {
+width:200px;
+height:300px;
+background:rgba(51,51,51,.7);
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+padding: 10px;
+}
+.com-title {
+	font-weight: bold;
+	font-size: 17px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+.com {
+	position: relative;
+	background: #ffffff;
+	margin-bottom: 10px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding: 7px;
+}
+.com:after {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 5px;
+	margin-top: -5px;
+}
+.com-box {
+	height: 180px;
+	overflow: auto;
+}
+.com-text input[type="text"] {
+	padding: 7px;
+	background: #fff;
+	border: 2px solid #666;
+	width: 180px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.submit-btn input[type="submit"] {
+	background: #fff;
+	padding: 5px 10px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
