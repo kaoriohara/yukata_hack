@@ -28,7 +28,7 @@ function SendMessage(){
   });
 }
 
-function LoadMessage(){
+function LoadMessage(x, y){
   postion = {x:"bbbb", y:"cccc"};
   $.ajax({
     type : 'POST',

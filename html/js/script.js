@@ -1,4 +1,4 @@
-/*global $, google */
+/*global $, google, LoadMessage */
 window.onload = function() {
   var defaultPos = new google.maps.LatLng(35.681735, 139.762651);
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
@@ -54,7 +54,7 @@ window.onload = function() {
 };
 
 function openChat(x, y) {
-  alert('open chat: ' + x + ', ' + y);
+  LoadMessage(x, y);
 }
 function createEvent(x, y) {
   $.ajax('/save_event', {
